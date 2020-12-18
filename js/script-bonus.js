@@ -3,21 +3,47 @@
 // al posto dei multipli di 5 stampi "Buzz"
 // al posto dei multipli sia di 3 che di 5 stampi "FizzBuzz"
 
+// var listaElement= document.getElementById('lista-fizzbuzz');
+// var newHTML;
+//
+// for(var x = 1; x <= 100; x++) {
+//
+// newHTML= '<li>';
+//
+//   if(x % 3 === 0 && x % 5 === 0) {
+//      newHTML+= 'fizzbuzz';
+//   } else if(x % 3 === 0) {
+//     newHTML+='buzz';
+//   } else if(x % 5 === 0) {
+//     newHTML+='fizz';
+//   } else {
+//     newHTML+=x;
+//   }
+// listaElement.innerHTML += newHTML + '</li>';
+// }
+//
+
+// oppure con if annidati
+
 var listaElement= document.getElementById('lista-fizzbuzz');
 var newHTML;
 
 for(var x = 1; x <= 100; x++) {
 
-newHTML= '<li>';
+  newHTML= '<li>';
 
-  if(x % 3 === 0 && x % 5 === 0) {
-     newHTML+= 'fizzbuzz';
-  } else if(x % 3 === 0) {
-    newHTML+='buzz';
-  } else if(x % 5 === 0) {
-    newHTML+='fizz';
-  } else {
+  if(x % 3 === 0 || x % 5 === 0) {
+    if(x % 3 === 0) {
+      newHTML+='buzz';
+    }
+    if(x % 5 === 0) {
+      newHTML+='fizz';
+    }
+  }
+  else {
     newHTML+=x;
   }
-listaElement.innerHTML += newHTML + '</li>';
+
+  listaElement.innerHTML += newHTML + '</li>';
+
 }
