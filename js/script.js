@@ -17,3 +17,5 @@ for (var i = 1; i <= 100; i++) {
         console.log(i);
     }
 }
+
+// Esercizio da rifare con le alternative
