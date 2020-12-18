@@ -4,12 +4,11 @@
 // al posto dei multipli sia di 3 che di 5 stampi "FizzBuzz"
 
 var listaElement= document.getElementById('lista-fizzbuzz');
-
+var newHTML;
 
 for(var x = 1; x <= 100; x++) {
 
-var newHTML= '<li>';
-
+newHTML= '<li>';
 
   if(x % 3 === 0 && x % 5 === 0) {
      newHTML+= 'fizzbuzz';
